@@ -27,6 +27,10 @@ function generatePassword(){
   if(typeof(numbCar)!= "number"){
     window.alert("Please enter a number");
     numbCar=window.prompt("How many characters would you like your pasword to have?");
+    if(numbCar<8){//if the number of characters selected is smaller than 8, it will ask to introduce the value again
+      window.alert("Password must be at least 8 characters");
+      numbCar=window.prompt("How many characters would you like your pasword to have?");
+    }
   }
 
   //saving in a variable which elements does the user want to be contained in the password, all booleans
