@@ -24,6 +24,11 @@ function generatePassword(){
     numbCar=window.prompt("How many characters would you like your pasword to have?");
   }
 
+  if(typeof(numbCar)!= "number"){
+    window.alert("Please enter a number");
+    numbCar=window.prompt("How many characters would you like your pasword to have?");
+  }
+
   //saving in a variable which elements does the user want to be contained in the password, all booleans
   var containSpecialCar=window.confirm("Click OK if you want password to have special characters");
   var containNumCar=window.confirm("Click OK if you want password to have numeric characters");
