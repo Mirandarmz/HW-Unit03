@@ -19,10 +19,18 @@ function generatePassword(){
   var password=""; //we initialize the variable password that will laster be used to concatenate the elements
   var numbCar=window.prompt("How many characters would you like your pasword to have?");
 
-  while(numbCar<8){//if the number of characters selected is smaller than 8, it will ask to introduce the value again
-    window.alert("Password must be at least 8 characters");
-    numbCar=window.prompt("How many characters would you like your pasword to have?");
+  console.log(isNaN(numbCar));
+  while(numbCar<8 || numbCar>128 || isNaN(numbCar)){//if the number of characters selected is smaller than 8 or larger than 128, it will ask to introduce the value again
+    if(numbCar<8 || numbCar>128 ){
+      window.alert("Password must be at least 8 characters and less than 128 characters");
+      numbCar=window.prompt("How many characters would you like your pasword to have?");
+    }
+    if(isNaN(numbCar)){
+      window.alert("Password must be a number, please enter a valid answer");//if the answer entered is not a number, it will ask for a number again 
+      numbCar=window.prompt("How many characters would you like your pasword to have?");
+    }
   }
+
 
   //saving in a variable which elements does the user want to be contained in the password, all booleans
   var containSpecialCar=window.confirm("Click OK if you want password to have special characters");
