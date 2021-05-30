@@ -1,4 +1,4 @@
-# 03 JavaScript: Password Generator
+# Password Generator
 
 ## Objective
 
@@ -20,3 +20,12 @@ The solution had a main limitation: each element was added in the same pattern (
 ## Solution of the limitation:
 
 In order to solve the limitation, a randomize function was made in which the elements within the string password were randomly swapped to eliminate the pattern issue 
+
+## Deployed application
+
+Image of the deployed application:
+![Screenshot of the deployed aplication](./Assets/Deployed.png)
+
+Link to the deployed application: 
+[Public github page](https://mirandarmz.github.io/Password-Generator//) 
+
